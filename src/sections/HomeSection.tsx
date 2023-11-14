@@ -1,29 +1,32 @@
 import { Button, Image } from "@nextui-org/react";
+import NextImage from "next/image";
 
 type Props = {};
 
 export default function HomeSection({}: Props) {
   return (
     <section
-      className="min-h-screen bg-gradient-to-b from-bg_start to-bg_end px-container py-20 lg:py-32 lg:px-lg flex justify-center"
+      className="min-h-screen bg-gradient-to-b from-bg_start to-bg_end px-container py-20 lg:py-32 lg:px-lg flex justify-center items-center flex-col gap-20"
       id="home"
     >
-      <div className="flex flex-col lg:flex-row lg:justify-between  w-full h-full container justify-center items-center gap-10">
-        <div className="text-center lg:text-start">
-          <h1 className="text-white text-hero-title ">Azizah Mukarromah Pemimpin Masa Depan</h1>
-          <h3 className="text-white pt-4 text-hero-subtitle">
-            Membangun Negeri Tanpa Lupa Jati Diri Sebagai Muslimah Sejati
+      <div className="flex flex-col lg:flex-row lg:justify-between w-full h-full container justify-center items-center gap-10">
+        <div className="text-center lg:text-start flex flex-col justify-center items-center lg:items-start">
+          <h1 className="text-white text-hero-title ">
+            Azizah Mukarromah Calon DPRD Kabupaten Ciamis
+          </h1>
+          <h3 className="pt-4 text-hero-subtitle max-w-lg">
+            Membangun Negeri Tanpa Melupakan Jati Diri Sebagai Muslimat Sejati
           </h3>
           <Button className="mt-5 bg-secondary text-white" size="lg">
             Explore
           </Button>
         </div>
-        <div className="relative">
+        <div className="relative ">
           <div
             className="absolute w-72 h-16 bg-white rounded-xl bottom-14 left-2 sm:-left-10 z-10 flex justify-evenly items-center
           gap-2"
           >
-            <div className="rounded-full w-8 h-8 bg-primary text-white flex justify-center items-center">
+            <div className="rounded-full h-8 w-8  bg-primary text-white flex justify-center items-center">
               03
             </div>
             <p className="text-primary-text font-medium text-base">Azizah Mukarromah</p>
@@ -65,13 +68,58 @@ export default function HomeSection({}: Props) {
             <p className="text-white font-medium text-base">Nahdhatul Ulama</p>
             <div className="w-3 h-3 bg-primary rounded-full"></div>
           </div>
-          <div className="bg-tertiary rounded-2xl relative overflow-y-hidden">
+          <div className="bg-white/20 backdrop-blur-lg rounded-2xl relative overflow-y-hidden">
             <Image
               src="/image-3.png"
               alt="Hero Image"
               className=" z-0 relative -bottom-10 drop-shadow-2xl w-[450px] h-[520px] sm:h-[550px] object-cover"
             />
           </div>
+        </div>
+      </div>
+      <div className="">
+        <p className="text-hero-subtitle text-center pb-5 md:pb-10">Official Partner</p>
+        <div className="flex gap-5 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-24 justify-center items-center w-full h-full flex-wrap">
+          <Image
+            src="/nu.svg"
+            alt="Logo NU"
+            as={NextImage}
+            width={200}
+            height={200}
+            className="w-24 sm:w-28"
+          />
+          <Image
+            src="/pkb.svg"
+            alt="Logo NU"
+            as={NextImage}
+            width={200}
+            height={200}
+            className="w-20 sm:w-24"
+          />
+          <Image
+            src="/muslimat.svg"
+            alt="Logo NU"
+            as={NextImage}
+            width={200}
+            height={200}
+            className="w-32 sm:w-40"
+          />
+          <Image
+            src="/anshor.png"
+            alt="Logo NU"
+            as={NextImage}
+            width={200}
+            height={200}
+            className="w-[81px] sm:w-24"
+          />
+          <Image
+            src="/fatayat.svg"
+            alt="Logo NU"
+            as={NextImage}
+            width={200}
+            height={200}
+            className="w-[75px] sm:w-[85px]"
+          />
         </div>
       </div>
     </section>

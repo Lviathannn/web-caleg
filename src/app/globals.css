@@ -2,12 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  @apply w-[5px];
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-white;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+}
+
 .text-primary-text {
-  @apply text-slate-700;
+  @apply text-slate-800;
 }
 
 .px-container {
-  @apply px-3 sm:px-8 md:px-10 lg:px-20 xl:px-32;
+  @apply px-5 sm:px-10 md:px-12 lg:px-20 xl:px-32;
 }
 
 .text-hero-title {
@@ -15,5 +28,5 @@
 }
 
 .text-hero-subtitle {
-  @apply text-lg sm:text-xl lg:text-2xl;
+  @apply text-lg sm:text-xl lg:text-2xl text-slate-100;
 }
