@@ -24,9 +24,9 @@
 }
 
 .text-hero-title {
-  @apply text-[40px] font-semibold sm:text-[50px] lg:text-[60px] leading-none md:max-w-2xl;
+  @apply text-[40px] font-semibold leading-none sm:text-[50px] md:max-w-2xl lg:text-[60px];
 }
 
 .text-hero-subtitle {
-  @apply text-lg sm:text-xl lg:text-2xl text-slate-100;
+  @apply text-lg text-slate-100 sm:text-xl lg:text-2xl;
 }
