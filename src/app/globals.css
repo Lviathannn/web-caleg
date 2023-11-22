@@ -19,8 +19,8 @@
   @apply text-slate-800;
 }
 
-.px-container {
-  @apply px-5 sm:px-10 md:px-12 lg:px-20 xl:px-32;
+.p-container {
+  @apply px-5 py-16 sm:px-10 md:px-12 lg:px-20 lg:py-28 xl:px-32;
 }
 
 .text-hero-title {

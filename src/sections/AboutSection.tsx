@@ -5,7 +5,7 @@ type Props = {};
 
 export default function AboutSection({}: Props) {
   return (
-    <section className='px-container py-20'>
+    <section className='p-container py-20'>
       <div className='flex flex-col items-stretch justify-center gap-14 lg:flex-row lg:items-center lg:justify-between'>
         <div className='lg:max-w-xl xl:max-w-2xl'>
           <h1 className='text-hero-title text-primary-text'>

@@ -6,7 +6,7 @@ type Props = {};
 export default function HomeSection({}: Props) {
   return (
     <section
-      className='px-container lg:px-lg flex min-h-screen flex-col items-center justify-center gap-20 bg-gradient-to-b from-bg_start to-bg_end py-20 lg:py-32'
+      className='p-container lg:px-lg flex min-h-screen flex-col items-center justify-center gap-20 bg-gradient-to-b from-bg_start to-bg_end !py-20'
       id='home'
     >
       <div className='container flex h-full w-full flex-col items-center justify-center gap-10 lg:flex-row lg:justify-between'>
