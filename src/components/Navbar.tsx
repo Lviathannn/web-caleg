@@ -4,14 +4,12 @@ import {
   Navbar as Nav,
   NavbarBrand,
   NavbarContent,
-  NavbarItem,
   NavbarMenuToggle,
   NavbarMenu,
-  NavbarMenuItem,
 } from '@nextui-org/navbar';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { Link } from 'react-scroll';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +35,6 @@ export default function Navbar() {
   return (
     <Nav
       onMenuOpenChange={setIsMenuOpen}
-      shouldHideOnScroll
       className={`fixed text-white shadow-none drop-shadow-none ${
         isAtTop ? 'bg-transparent backdrop-saturate-100' : 'bg-primary/80'
       }`}
@@ -60,26 +57,18 @@ export default function Navbar() {
       </NavbarContent>
 
       <NavbarContent className='hidden gap-4 sm:flex' justify='end'>
-        <NavbarItem>
-          <Link color='foreground' href='#'>
-            Home
+        {menuItems.map((item, index) => (
+          <Link
+            smooth={true}
+            duration={1000}
+            to={item}
+            className='cursor-pointer font-normal hover:text-secondary'
+            offset={item === 'Contact' ? -200 : 0}
+            key={index}
+          >
+            {item}
           </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href='#' aria-current='page'>
-            About
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color='foreground' href='#'>
-            Program
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color='foreground' href='#'>
-            Contact
-          </Link>
-        </NavbarItem>
+        ))}
       </NavbarContent>
 
       {/* Mobile View */}
@@ -89,21 +78,16 @@ export default function Navbar() {
         }`}
       >
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2
-                  ? 'primary'
-                  : index === menuItems.length - 1
-                  ? 'danger'
-                  : 'foreground'
-              }
-              className='w-full'
-              href='#'
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
+          <Link
+            smooth={true}
+            duration={1000}
+            to={item}
+            className='cursor-pointer font-normal hover:text-secondary'
+            offset={item === 'Contact' ? -200 : 0}
+            key={index}
+          >
+            {item}
+          </Link>
         ))}
       </NavbarMenu>
     </Nav>

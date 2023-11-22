@@ -12,7 +12,7 @@ export default function Tabs({}: Props) {
   return (
     <div className='flex w-full flex-col items-center justify-between gap-10 lg:flex-row'>
       <VissionMissionCard activeTabs={activeTabs} />
-      <div className='w-full'>
+      <div className='w-full lg:w-[60%]'>
         <div className='flex flex-col gap-5'>
           <Button
             color={activeTabs === 'visi' ? 'secondary' : 'default'}

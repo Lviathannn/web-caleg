@@ -1,5 +1,5 @@
 import { Card, CardBody, CardFooter, Image } from '@nextui-org/react';
-import ModalComponents from './ModalComponents';
+import ModalComponents from './ModalComponent';
 
 type Props = {
   image: string;

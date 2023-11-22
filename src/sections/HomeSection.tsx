@@ -1,3 +1,6 @@
+'use client';
+
+import ButtonLinkComponent from '@/components/ButtonLinkComponent';
 import { Button, Image } from '@nextui-org/react';
 import NextImage from 'next/image';
 
@@ -7,19 +10,18 @@ export default function HomeSection({}: Props) {
   return (
     <section
       className='p-container lg:px-lg flex min-h-screen flex-col items-center justify-center gap-20 bg-gradient-to-b from-bg_start to-bg_end !py-20'
-      id='home'
+      id='Home'
     >
       <div className='container flex h-full w-full flex-col items-center justify-center gap-10 lg:flex-row lg:justify-between'>
         <div className='flex flex-col items-center justify-center text-center lg:items-start lg:text-start'>
           <h1 className='text-hero-title text-white '>
-            Azizah Mukarromah Calon DPRD Kabupaten Ciamis
+            Azizah Mukarromah S.H.I Calon DPRD Kabupaten Ciamis
           </h1>
           <h3 className='text-hero-subtitle max-w-lg pt-4'>
-            Membangun Negeri Tanpa Melupakan Jati Diri Sebagai Muslimat Sejati
+            Berbakti Pada Negeri Tanpa Melupakan Jati Diri Sebagai Muslimat
+            Sejati
           </h3>
-          <Button className='mt-5 bg-secondary text-white' size='lg'>
-            Explore
-          </Button>
+          <ButtonLinkComponent caption='explore' to='About' offset={0} />
         </div>
         <div className='relative '>
           <div

@@ -9,7 +9,8 @@ const outfit = Outfit({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Azizah Mukarromah - Calon Anggota DPRD Kabupaten Ciamis',
-  description: 'Azizah Mukarromah - Calon Anggota DPRD Kabupaten Ciamis',
+  description:
+    'Azizah Mukarromah adalah seorang aktifis yang mencuat dalam dunia kegiatan keagamaan dan kewanitaan, terlibat dengan berbagai organisasi.',
 };
 
 export default function RootLayout({

@@ -18,7 +18,7 @@ type props = {
   content: string;
 };
 
-export default function ModalComponents({ image, title, content }: props) {
+export default function ModalComponent({ image, title, content }: props) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
@@ -40,7 +40,7 @@ export default function ModalComponents({ image, title, content }: props) {
               <Image
                 src={`/${image}.jpg`}
                 alt='Program 1'
-                className=' w-full rounded-[12px]'
+                className=' w-full rounded-none'
               />
               <ModalHeader className='flex flex-col gap-1'>{title}</ModalHeader>
               <ModalBody>

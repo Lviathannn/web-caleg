@@ -1,5 +1,7 @@
-import { Button, Image } from '@nextui-org/react';
-import { ClipboardEdit } from 'lucide-react';
+'use client';
+import ButtonLinkComponent from '@/components/ButtonLinkComponent';
+import { Image } from '@nextui-org/react';
+import { ClipboardCheck } from 'lucide-react';
 import NextImage from 'next/image';
 
 type Props = {};
@@ -28,15 +30,12 @@ export default function ContributeSection({}: Props) {
           dapat menciptakan perubahan yang positif. Ayo bergabung dan wujudkan
           perubahan bersama kami!
         </p>
-        <Button
-          className='mt-5'
-          color='secondary'
-          radius='sm'
-          startContent={<ClipboardEdit />}
-          size='lg'
-        >
-          Daftar Sebagai Relawan
-        </Button>
+        <ButtonLinkComponent
+          caption='Daftar Relawan'
+          to='Contact'
+          Icon={ClipboardCheck}
+          offset={-200}
+        />
       </div>
     </section>
   );

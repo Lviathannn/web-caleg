@@ -15,6 +15,10 @@
   @apply bg-primary;
 }
 
+#mission::-webkit-scrollbar-thumb {
+  @apply bg-secondary;
+}
+
 .text-primary-text {
   @apply text-slate-800;
 }
