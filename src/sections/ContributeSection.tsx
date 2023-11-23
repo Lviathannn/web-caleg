@@ -1,6 +1,7 @@
 'use client';
 import ButtonLinkComponent from '@/components/ButtonLinkComponent';
 import { Image } from '@nextui-org/react';
+import { motion } from 'framer-motion';
 import { ClipboardCheck } from 'lucide-react';
 import NextImage from 'next/image';
 
@@ -9,15 +10,29 @@ type Props = {};
 export default function ContributeSection({}: Props) {
   return (
     <section className='p-container flex flex-col items-center justify-center lg:flex-row lg:justify-between lg:gap-10'>
-      <Image
-        src='/contribute.svg'
-        alt='Azizah Mukarromah Image'
-        as={NextImage}
-        width={500}
-        height={500}
-        className='h-[400px] w-[400px] object-cover sm:h-[600px] sm:w-[600px] lg:h-[500px] lg:w-[500px] xl:h-[550px] xl:w-[550px]'
-      />
-      <div className='lg:max-w-lg xl:max-w-2xl'>
+      <motion.div
+        className=''
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <Image
+          src='/contribute.svg'
+          alt='Azizah Mukarromah Image'
+          as={NextImage}
+          width={500}
+          height={500}
+          className='h-[400px] w-[400px] object-cover sm:h-[600px] sm:w-[600px] lg:h-[500px] lg:w-[500px] xl:h-[550px] xl:w-[550px]'
+        />
+      </motion.div>
+      <motion.div
+        className='lg:max-w-lg xl:max-w-2xl'
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
         <p className='text-medium text-slate-500 md:text-lg'>
           Contribute For Us{' '}
         </p>
@@ -36,7 +51,7 @@ export default function ContributeSection({}: Props) {
           Icon={ClipboardCheck}
           offset={-200}
         />
-      </div>
+      </motion.div>
     </section>
   );
 }

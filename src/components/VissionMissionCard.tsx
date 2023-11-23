@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 type Props = {
   activeTabs: 'visi' | 'misi';
 };
@@ -29,7 +31,13 @@ export default function VissionMissionCard({ activeTabs }: Props) {
     ],
   };
   return (
-    <div className='relative z-10 w-full overflow-hidden rounded-md bg-white drop-shadow-2xl'>
+    <motion.div
+      className='relative z-10 w-full overflow-hidden rounded-md bg-white drop-shadow-2xl'
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1, scale: [0, 1] }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
       <div className='fixed top-0 z-0 flex h-8 w-full items-center gap-1 bg-secondary px-5'>
         <div className='h-2 w-2 rounded-full bg-bg_secondary'></div>
         <div className='h-2 w-2 rounded-full bg-bg_secondary'></div>
@@ -65,6 +73,6 @@ export default function VissionMissionCard({ activeTabs }: Props) {
           </ul>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
