@@ -63,10 +63,15 @@ export default function ProgramSection({}: Props) {
         variants={variants}
         initial='hidden'
         whileInView='visible'
-        transition={{ staggerChildren: 0.35 }}
+        transition={{ staggerChildren: 0.4 }}
+        viewport={{ once: true }}
       >
         {program.map((item) => (
-          <motion.div variants={childVariants} key={item.id}>
+          <motion.div
+            variants={childVariants}
+            key={item.id}
+            transition={{ delay: 0.2 * item.id }}
+          >
             <CardComponent
               image={item.image}
               title={item.title}

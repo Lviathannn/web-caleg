@@ -11,6 +11,7 @@ import {
   Image,
 } from '@nextui-org/react';
 import { Check, Search } from 'lucide-react';
+import NextImage from 'next/image';
 
 type props = {
   image: string;
@@ -40,7 +41,10 @@ export default function ModalComponent({ image, title, content }: props) {
               <Image
                 src={`/${image}.jpg`}
                 alt='Program 1'
-                className=' w-full rounded-none'
+                as={NextImage}
+                width={800}
+                height={400}
+                className='aspect-video h-full w-full rounded-none'
               />
               <ModalHeader className='flex flex-col gap-1'>{title}</ModalHeader>
               <ModalBody>

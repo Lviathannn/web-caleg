@@ -106,6 +106,9 @@ export default function HomeSection({}: Props) {
             <Image
               src='/image-3.png'
               alt='Hero Image'
+              width={450}
+              height={550}
+              as={NextImage}
               className=' relative -bottom-10 z-0 h-[520px] w-[450px] object-cover drop-shadow-2xl sm:h-[550px]'
             />
           </div>

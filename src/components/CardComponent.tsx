@@ -1,5 +1,6 @@
 import { Card, CardBody, CardFooter, Image } from '@nextui-org/react';
 import ModalComponents from './ModalComponent';
+import NextImage from 'next/image';
 
 type Props = {
   image: string;
@@ -14,7 +15,10 @@ export default function CardComponent({ image, title, content }: Props) {
         <Image
           src={`/${image}.jpg`}
           alt='Program 1'
-          className=' w-full rounded-[12px]'
+          width={800}
+          height={400}
+          as={NextImage}
+          className='h-full w-full rounded-[12px]'
         />
         <h1 className='mt-3 text-lg font-medium text-slate-600'>{title}</h1>
         <p className='mt-1 line-clamp-2'>{content}</p>
