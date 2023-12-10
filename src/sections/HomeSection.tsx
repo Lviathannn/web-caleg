@@ -34,7 +34,7 @@ export default function HomeSection({}: Props) {
             Azizah Mukarromah S.H.I Calon DPRD Kabupaten Ciamis
           </h1>
           <h3 className='text-hero-subtitle max-w-lg pt-4'>
-            Berbakti Pada Negeri Tanpa Melupakan Jati Diri Sebagai Muslimat
+            Berbakti Untuk Negeri Tanpa Meninggalkan Jati Diri Sebagai Muslimat
             Sejati
           </h3>
           <ButtonLinkComponent caption='explore' to='About' offset={0} />

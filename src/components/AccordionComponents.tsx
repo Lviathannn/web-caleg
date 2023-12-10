@@ -21,6 +21,12 @@ export default function AccordionComponents() {
       answer:
         'Partai Kebangkitan Bangsa (PKB) Berada di Nomor Urut 1,dan Azizah Mukarromah Berada di Nomor Urut 3',
     },
+    {
+      id: 4,
+      question: 'Ada di dapil mana Azizah Mukarromah berada ?',
+      answer:
+        'Azizah Mukarromah adalah calon legislatif kabupaten ciamis dapil 5 yang meliputi kecamatan Banjaranyar,Banjarsari,Lakbok, dan Purwadadi',
+    },
   ];
 
   return (

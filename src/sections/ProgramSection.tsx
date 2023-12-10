@@ -37,7 +37,7 @@ const program = [
     id: 2,
     title: 'Pendidikan Berkualitas',
     content:
-      'Azizah berkomitmen untuk menyediakan pendidikan berkualitas yang mengintegrasikan nilai-nilai keagamaan. Dengan mendukung kurikulum yang mencakup aspek spiritual dan moral, Azizah ingin membentuk generasi penerus yang cerdas dan berintegritas.',
+      'Azizah berkomitmen untuk mendorong pemerintah agar menyediakan pendidikan berkualitas yang mengintegrasikan nilai-nilai keagamaan. Dengan mendukung kurikulum yang mencakup aspek spiritual dan moral, Azizah ingin membentuk generasi penerus yang cerdas dan berintegritas.',
     image: 'program-2',
   },
   {
